@@ -18,6 +18,10 @@ console.log("Arguments passed:", argsArray);
 
        // await page.close(); // Close the page after use
         await page.waitForEvent('close');
+
+        // Wait for 6 minutes (360,000 ms) before the next loop iteration
+        console.log(`Waiting 6 minutes before processing the next item...`);
+        await delay(360000);
     }
 
     //await browser.close(); // Close browser after the loop
